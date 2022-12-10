@@ -1,0 +1,51 @@
+import { useCurrentStateAndParams } from '@uirouter/react';
+import { FunctionComponent } from 'react';
+import { useAsync } from 'react-use';
+
+import { LoadingSpinner } from '@cloudrock/core/LoadingSpinner';
+import { OrganizationUpdate } from '@cloudrock/customer/list/OrganizationUpdate';
+import { translate } from '@cloudrock/i18n';
+import { useBreadcrumbsFn } from '@cloudrock/navigation/breadcrumbs/store';
+import { BreadcrumbItem } from '@cloudrock/navigation/breadcrumbs/types';
+import { useTitle } from '@cloudrock/navigation/title';
+import { getCustomer } from '@cloudrock/project/api';
+
+const getBreadcrumbs = (): BreadcrumbItem[] => [
+  {
+    label: translate('Support dashboard'),
+    state: 'support.helpdesk',
+  },
+  {
+    label: translate('Organizations'),
+    state: 'support.customers',
+  },
+];
+
+export const OrganizationUpdateContainer: FunctionComponent = () => {
+  const {
+    params: { customer_uuid },
+  } = useCurrentStateAndParams();
+  const {
+    loading,
+    error,
+    value: customer,
+  } = useAsync(() => getCustomer(customer_uuid));
+
+  useBreadcrumbsFn(getBreadcrumbs, []);
+
+  useTitle(
+    customer
+      ? translate('Organization update ({name})', {
+          name: customer.name,
+        })
+      : translate('Organization update'),
+  );
+
+  return loading ? (
+    <LoadingSpinner />
+  ) : error ? (
+    <>{translate('Unable to load customer.')}</>
+  ) : (
+    <OrganizationUpdate customer={customer} />
+  );
+};

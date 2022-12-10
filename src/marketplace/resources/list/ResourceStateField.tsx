@@ -1,0 +1,29 @@
+import { pick } from '@cloudrock/core/utils';
+import { ResourceState } from '@cloudrock/resource/state/ResourceState';
+import { Resource as ResourceType } from '@cloudrock/resource/types';
+
+import { Resource } from '../types';
+
+import { MarketplaceResourceStateField } from './MarketplaceResourceStateField';
+
+const pickResource = pick(['action', 'action_details', 'runtime_state']);
+
+const OPENSTACK_OFFERINGS = [
+  'OpenStack.Admin',
+  'OpenStackTenant.Instance',
+  'OpenStackTenant.Volume',
+];
+
+export const ResourceStateField = ({ row }: { row: Resource }) => {
+  if (OPENSTACK_OFFERINGS.includes(row.offering_type)) {
+    const resource = {
+      resource_type: row.offering_type,
+      service_settings_state: 'OK',
+      state: row.backend_metadata.state || 'Erred',
+      ...pickResource(row.backend_metadata),
+    } as ResourceType;
+    return <ResourceState resource={resource} />;
+  } else {
+    return <MarketplaceResourceStateField resource={row} />;
+  }
+};

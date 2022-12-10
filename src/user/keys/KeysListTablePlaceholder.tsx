@@ -1,0 +1,16 @@
+import { FunctionComponent } from 'react';
+
+import { translate } from '@cloudrock/i18n';
+import { ImageTablePlaceholder } from '@cloudrock/table/ImageTablePlaceholder';
+
+const Illustration = require('@cloudrock/images/table-placeholders/undraw_empty_xct9.svg');
+
+export const KeysListTablePlaceholder: FunctionComponent = () => (
+  <ImageTablePlaceholder
+    illustration={Illustration}
+    title={translate(`There are no SSH keys yet.`)}
+    description={translate(
+      `Public SSH keys will be injected into services that allow key-based access.`,
+    )}
+  />
+);

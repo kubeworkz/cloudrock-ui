@@ -1,0 +1,23 @@
+.pre-container {
+  display: inline-block;
+
+  pre {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0;
+    margin-bottom: 0;
+
+    .copyable-content {
+      max-width: 280px;
+      padding: 12px 10px;
+      overflow-x: scroll;
+    }
+
+    .copy-to-clipboard-container {
+      border-left: 1px solid #ccc;
+      padding: 0 10px;
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@mixin property($property, $values) {
+  $px: ();
+  @each $value in $values {
+    $px: append($px, $value + px);
+  }
+  #{$property}: $px;
+}

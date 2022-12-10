@@ -1,0 +1,44 @@
+import { Table } from 'react-bootstrap';
+
+import { StateIndicator } from '@cloudrock/core/StateIndicator';
+import { translate } from '@cloudrock/i18n';
+
+import { ChecklistStats } from './types';
+
+export const StatsTable = ({
+  stats,
+  scopeTitle,
+}: {
+  stats: ChecklistStats[];
+  scopeTitle: string;
+}) => (
+  <Table responsive={true} bordered={true} striped={true} className="m-t-md">
+    <thead>
+      <tr>
+        <th className="col-sm-1">#</th>
+        <th>{scopeTitle}</th>
+        <th>{translate('Score')}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {stats.map((customer, index) => (
+        <tr key={customer.uuid}>
+          <td>{index + 1}</td>
+          <td>{customer.name}</td>
+          <td>
+            <StateIndicator
+              label={`${customer.score} %`}
+              variant={
+                customer.score < 25
+                  ? 'danger'
+                  : customer.score < 75
+                  ? 'warning'
+                  : 'primary'
+              }
+            />
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </Table>
+);

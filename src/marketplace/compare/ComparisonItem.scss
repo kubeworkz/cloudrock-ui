@@ -1,0 +1,16 @@
+.comparison-item {
+  position: relative;
+}
+
+.comparison-item-close {
+  position: absolute;
+  right: 17px;
+}
+
+.comparison-item-thumb {
+  height: 8em;
+  padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

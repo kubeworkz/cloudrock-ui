@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@cloudrock/*": ["src/*"]
+    },
+    "lib": ["es2016", "dom"]
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["./cypress/**/*"],
+  "typeRoots": ["./node_modules/@types", "./typings.d.ts"]
+}

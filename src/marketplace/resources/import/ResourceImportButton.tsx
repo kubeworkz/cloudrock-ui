@@ -1,0 +1,45 @@
+import React from 'react';
+import { connect } from 'react-redux';
+
+import { lazyComponent } from '@cloudrock/core/lazyComponent';
+import { translate } from '@cloudrock/i18n';
+import { openModalDialog } from '@cloudrock/modal/actions';
+import { ActionButton } from '@cloudrock/table/ActionButton';
+
+const ResourceImportDialog = lazyComponent(
+  () =>
+    import(
+      /* webpackChunkName: "ResourceImportDialog" */ './ResourceImportDialog'
+    ),
+  'ResourceImportDialog',
+);
+
+interface ResourceImportButtonProps {
+  category_uuid: string;
+  project_uuid: string;
+  openDialog(): void;
+}
+
+const PureResourceImportButton: React.FC<ResourceImportButtonProps> = (
+  props,
+) => (
+  <ActionButton
+    title={translate('Import resource')}
+    action={props.openDialog}
+    icon="fa fa-plus"
+  />
+);
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  openDialog: () =>
+    dispatch(
+      openModalDialog(ResourceImportDialog, {
+        resolve: ownProps,
+        size: 'lg',
+      }),
+    ),
+});
+
+const connector = connect(null, mapDispatchToProps);
+
+export const ResourceImportButton = connector(PureResourceImportButton);

@@ -1,0 +1,33 @@
+import { FunctionComponent } from 'react';
+import { Field } from 'redux-form';
+
+import { required } from '@cloudrock/core/validators';
+import { translate } from '@cloudrock/i18n';
+
+import { FormGroup } from './FormGroup';
+
+interface DisplayNameFieldProps {
+  name: string;
+  disabled?: boolean;
+  readOnly?: boolean;
+}
+
+export const DisplayNameField: FunctionComponent<DisplayNameFieldProps> = (
+  props,
+) => (
+  <FormGroup
+    label={translate('Display name')}
+    required={true}
+    description={translate('Label that is visible to users in Marketplace.')}
+  >
+    <Field
+      component="input"
+      className="form-control"
+      name={props.name}
+      type="text"
+      validate={required}
+      disabled={props.disabled}
+      readOnly={props.readOnly}
+    />
+  </FormGroup>
+);
