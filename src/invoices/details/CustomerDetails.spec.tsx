@@ -6,7 +6,7 @@ const Customer = {
   name: 'CloudRock',
   address: 'Lille 4-205',
   country: 'Estonia',
-  email: 'saas@fullstackstart.com',
+  email: 'support@cloudrock.ca',
   postal: '80041',
   phone_number: {
     country_code: '372',
