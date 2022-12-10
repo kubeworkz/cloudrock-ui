@@ -242,7 +242,7 @@ module.exports = {
           to: utils.formatPath('images/service-providers'),
         },
         // favicon is a part of white-labeling, store such resources separately.
-        // https://docs.cloudrock.com/admin-guide/deployment/helm/docs/whitelabeling/
+        // https://docs.cloudrock.ca/admin-guide/deployment/helm/docs/whitelabeling/
         {
           from: path.resolve(imagesPath, './favicon.ico'),
           to: utils.formatPath('images/favicon.ico'),
