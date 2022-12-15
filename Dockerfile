@@ -35,7 +35,7 @@ COPY --from=next /app/build /usr/share/nginx/html/next
 COPY --from=next /app/build/index.html /usr/share/nginx/html/next/index.orig.html
 
 ENV API_URL="http://localhost:8080"
-ENV TITLE="Waldur | Cloud Service Management"
+ENV TITLE="Cloudrock | Cloud Service Management"
 
 # put config template outside the public root
 COPY docker/config.template.json /usr/share/nginx/
