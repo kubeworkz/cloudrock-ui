@@ -9,8 +9,8 @@ else
   export VERSION=${1#v}
 fi
 
-DOCKER_PASSWORD=${DOCKER_PASSWORD:-$WALDUR_DOCKER_HUB_PASSWORD}
-DOCKER_USERNAME=${DOCKER_USERNAME:-$WALDUR_DOCKER_HUB_USER}
+DOCKER_PASSWORD=${DOCKER_PASSWORD:-$CLOUDROCK_DOCKER_HUB_PASSWORD}
+DOCKER_USERNAME=${DOCKER_USERNAME:-$CLOUDROCK_DOCKER_HUB_USER}
 
 mkdir build-info
 if [ $CI_COMMIT_SHA ]
@@ -27,7 +27,7 @@ then
   cat build-info/COMMIT_TAG
 fi
 
-apk add git
+#apk add git
 git clone -b next --single-branch "https://gitlab-ci-token:$GITLAB_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git" next
 
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin

@@ -1,17 +1,17 @@
 include:
-  - project: "waldur/waldur-pipelines"
+  - project: "cloudrock/cloudrock-pipelines"
     file: "/templates/stages.yml"
-  - project: "waldur/waldur-pipelines"
+  - project: "cloudrock/cloudrock-pipelines"
     file: "/templates/release/publish.yml"
-  - project: "waldur/waldur-pipelines"
+  - project: "cloudrock/cloudrock-pipelines"
     file: "/templates/validate/docker-compose-trigger.yml"
-  - project: "waldur/waldur-pipelines"
+  - project: "cloudrock/cloudrock-pipelines"
     file: "/templates/test/lint-docker-image.yaml"
-  - project: "waldur/waldur-pipelines"
+  - project: "cloudrock/cloudrock-pipelines"
     file: "/templates/test/lint-dockerfile.yaml"
-  - project: "waldur/waldur-pipelines"
+  - project: "cloudrock/cloudrock-pipelines"
     file: "/templates/test/lint-md-files.yml"
-  - project: "waldur/waldur-pipelines"
+  - project: "cloudrock/cloudrock-pipelines"
     file: "/templates/deploy/dev-env-update.yml"
 
 variables:
@@ -112,7 +112,7 @@ Build artifact:
 Lint docker image:
   extends: .Lint docker image template
   variables:
-    IMAGE: opennode/waldur-homeport:latest
+    IMAGE: opennode/cloudrock-homeport:latest
     DOCKERFILE: Dockerfile
   before_script: []
 

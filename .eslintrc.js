@@ -29,7 +29,7 @@ module.exports = {
     },
     'import/resolver': {
       alias: {
-        map: [['@waldur', './src']],
+        map: [['@cloudrock', './src']],
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
       },
     },
@@ -50,7 +50,7 @@ module.exports = {
         'newlines-between': 'always',
         pathGroups: [
           {
-            pattern: '@waldur/**',
+            pattern: '@cloudrock/**',
             group: 'internal',
             position: 'after',
           },

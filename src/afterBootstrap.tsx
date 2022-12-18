@@ -14,9 +14,9 @@ export function afterBootstrap() {
   if (ENV.plugins.CLOUDROCK_CORE.GOOGLE_ANALYTICS_ID) {
     ReactGA.initialize(ENV.plugins.CLOUDROCK_CORE.GOOGLE_ANALYTICS_ID);
   }
-  if (ENV.plugins.CLOUDROCK_CORE.HOMEPORT_SENTRY_DSN) {
+  if (ENV.plugins.CLOUDROCK_CORE.CLOUDROCK_UI_SENTRY_DSN) {
     Sentry.init({
-      dsn: ENV.plugins.CLOUDROCK_CORE.HOMEPORT_SENTRY_DSN,
+      dsn: ENV.plugins.CLOUDROCK_CORE.CLOUDROCK_UI_SENTRY_DSN,
     });
   }
   loadInspinia();

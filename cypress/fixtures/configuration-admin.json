@@ -126,7 +126,7 @@
     "INVITATION_CIVIL_NUMBER_LABEL": "",
     "INVITATION_CIVIL_NUMBER_HELP_TEXT": "Must start with a country prefix ie EE34501234215",
     "INVITATION_TAX_NUMBER_LABEL": "",
-    "HOMEPORT_SENTRY_DSN": null,
+    "CLOUDROCK_UI_SENTRY_DSN": null,
     "SIDEBAR_LOGO": null,
     "POWERED_BY_LOGO": null,
     "BRAND_COLOR": "#3a8500",
