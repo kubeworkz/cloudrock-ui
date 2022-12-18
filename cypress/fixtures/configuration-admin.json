@@ -81,13 +81,13 @@
       "English"
     ],
     [
-      "et",
-      "Eesti"
+      "es",
+      "Spanish"
     ]
   ],
   "LANGUAGE_CODE": "en",
   "CLOUDROCK_CORE": {
-    "CURRENCY_NAME": "EUR",
+    "CURRENCY_NAME": "USD",
     "SITE_NAME": "Cloudrock",
     "SITE_EMAIL": "",
     "SITE_ADDRESS": "",
