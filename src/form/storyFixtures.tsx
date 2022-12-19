@@ -44,7 +44,7 @@ export const choices = [
   {
     url: 'http://localhost:8000/api/openstacktenant-images/879e976b35ef405da1828dbd1d2e9b95/',
     uuid: '879e976b35ef405da1828dbd1d2e9b95',
-    name: 'Ubuntu 16.04 64bit',
+    name: 'Ubuntu 22.04 64bit',
     settings:
       'http://localhost:8000/api/service-settings/3ffa92fa9272425282361c1451c8734d/',
     min_disk: 0,
