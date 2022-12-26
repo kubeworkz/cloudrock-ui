@@ -7234,7 +7234,7 @@ msgstr ""
 
 #: src/auth/auth-login.html
 msgid ""
-"Your single pane of control for all cloud services. Login in to see it in "
+"Your platform for all cloud services. Login in to see it in "
 "action."
 msgstr ""
 

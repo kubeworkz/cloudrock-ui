@@ -92,7 +92,7 @@
     "SITE_EMAIL": "",
     "SITE_ADDRESS": "",
     "SITE_PHONE": "",
-    "SITE_DESCRIPTION": "Your single pane of control for managing projects, teams and resources in a self-service manner.",
+    "SITE_DESCRIPTION": "Your platform for managing saas projects, teams and resources in a self-serve manner.",
     "METAL_URL": "",
     "AUTHENTICATION_METHODS": [
       "LOCAL_SIGNIN",
