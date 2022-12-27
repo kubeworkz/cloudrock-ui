@@ -17,7 +17,7 @@ export const HeroColumn = () => (
   >
     <div className="HeroBackground">
       <div className="HeroText">
-        <h1>{ENV.plugins.CLOUDROCK_CORE.SITE_DESCRIPTION}</h1>
+        <h1>Your platform for managing Saas projects, teams and resources in a self-serve manner.</h1>
         <HeroButton />
       </div>
     </div>
