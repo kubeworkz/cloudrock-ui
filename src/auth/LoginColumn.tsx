@@ -2,7 +2,6 @@ import { LanguageSelectorBox } from '@cloudrock/i18n/LanguageSelectorBox';
 import { FooterLinks } from '@cloudrock/navigation/FooterLinks';
 
 import { AuthHeader } from './AuthHeader';
-import { IdentityProviderSelector } from './IdentityProviderSelector';
 import { LocalLogin } from './LocalLogin';
 import { PoweredBy } from './PoweredBy';
 import { useAuthFeatures } from './useAuthFeatures';
@@ -20,7 +19,9 @@ export const LoginColumn = () => {
             <img src="images/login_logo.png" />
           </div>
           <AuthHeader />
-          {features.SigninForm}
+          {features.SigninForm && (
+            <LocalLogin />
+          )}
           <UserAuthWarning />
           <PoweredBy />
         </div>
