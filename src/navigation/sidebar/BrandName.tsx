@@ -31,7 +31,7 @@ export const BrandName: FunctionComponent = () => {
         );
         break;
       case SUPPORT_WORKSPACE:
-        // temporary solution till WAL-3909 (support dashboard) is done
+        // temporary solution till CRK-3909 (support dashboard) is done
         if (!ENV.plugins.CLOUDROCK_SUPPORT) {
           return router.stateService.go('marketplace-support-resources');
         }

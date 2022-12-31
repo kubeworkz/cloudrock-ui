@@ -8,7 +8,7 @@ import {
 } from './utils';
 
 describe('formatFilesize', () => {
-  // https://fullstackstart.atlassian.net/browse/WAL-378
+  // https://fullstackstart.atlassian.net/browse/CRK-378
   it('displays value in MB without any digits after comma if value < 1 GB', () => {
     expect(formatFilesize(700)).toBe('700 MB');
   });
