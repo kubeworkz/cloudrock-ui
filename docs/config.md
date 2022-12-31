@@ -10,4 +10,4 @@ configuration files are loaded and their options are merged together with defaul
 
 - /src/configs/config.json - custom configuration settings.
 
-Please follow [Administration guide](https://fullstackstart.atlassian.net/wiki/display/CR/CloudrockUI+configuration) to learn more.
+Please follow [Administration guide](https://kubeworkz.atlassian.net/wiki/display/CR/CloudrockUI+configuration) to learn more.

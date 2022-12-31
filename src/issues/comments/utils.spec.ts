@@ -22,15 +22,15 @@ describe('JIRA markup formatter', () => {
     test(
       `In particular, https://github.com/kubeworkz/cloudrock-openstack/blob/develop/src/cloudrock_openstack/openstack_tenant/tasks.py#L138 was displayed as a broken link.`,
       // eslint-disable-next-line
-      `In particular, <a href="https://github.com/kubeworkz/cloudrock-openstack/blob/develop/src/cloudrock_openstack/openstack_tenant/tasks.py#L138">https://github.com/fullstackstart/cloudrock-openstack/blob/develop/src/cloudrock_openstack/openstack_tenant/tasks.py#L138</a> was displayed as a broken link.`,
+      `In particular, <a href="https://github.com/kubeworkz/cloudrock-openstack/blob/develop/src/cloudrock_openstack/openstack_tenant/tasks.py#L138">https://github.com/kubeworkz/cloudrock-openstack/blob/develop/src/cloudrock_openstack/openstack_tenant/tasks.py#L138</a> was displayed as a broken link.`,
     );
   });
 
   it('linkifies correctly', () => {
     test(
-      'Kood, mis selle realiseerib on https://github.com/fullstackstart/cloudrock-metal/blob/develop/src/cloudrock_openstack/openstack_tenant/backend.py#L947',
+      'Kood, mis selle realiseerib on https://github.com/kubeworkz/cloudrock-metal/blob/develop/src/cloudrock_openstack/openstack_tenant/backend.py#L947',
 
-      'Kood, mis selle realiseerib on <a href="https://github.com/fullstackstart/cloudrock-metal/blob/develop/src/cloudrock_openstack/openstack_tenant/backend.py#L947">https://github.com/fullstackstart/cloudrock-metal/blob/develop/src/cloudrock_openstack/openstack_tenant/backend.py#L947</a> ',
+      'Kood, mis selle realiseerib on <a href="https://github.com/kubeworkz/cloudrock-metal/blob/develop/src/cloudrock_openstack/openstack_tenant/backend.py#L947">https://github.com/kubeworkz/cloudrock-metal/blob/develop/src/cloudrock_openstack/openstack_tenant/backend.py#L947</a> ',
     );
   });
 
