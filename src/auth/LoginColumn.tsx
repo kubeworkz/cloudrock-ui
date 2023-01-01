@@ -20,7 +20,7 @@ export const LoginColumn = () => {
           </div>
           <AuthHeader />
           {features.SigninForm && (
-            <LocalLogin = enableSeperator={} />
+            <LocalLogin enableSeperator={features.enableSeperator} />
           )}
           <UserAuthWarning />
           <PoweredBy />
